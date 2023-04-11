@@ -1,0 +1,21 @@
+mutation deleteUser(
+  	$userId:ID!
+  
+){
+    deleteUser( 
+        input: {
+          	userId:$userId
+           
+        }
+    )
+  {
+    success
+    message
+    user{
+      id
+      username
+      lastName
+      email
+    }
+  }
+}

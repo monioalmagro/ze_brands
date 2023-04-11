@@ -1,0 +1,21 @@
+mutation createBrand(
+    $name:String!
+    $description:String
+){
+    createBrand(
+        input:{
+        name:$name
+        description:$description
+        }
+    )
+    {
+    success
+    brand{
+        id
+        originalId
+        name
+        description
+    }
+    message
+    }
+}

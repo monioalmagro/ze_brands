@@ -1,0 +1,29 @@
+mutation updateProduct(
+  	$productId:ID!
+    $price:Decimal
+    $name:String
+){
+    updateProduct( 
+        input: {
+          	productId:$productId
+            name:$name 
+            price:$price 
+        }
+    )
+  {
+    success
+    product{
+        id
+        sku
+        name
+        price
+        brand{
+          id
+          originalId
+          name
+          description
+        }
+    }
+    message
+  }
+}

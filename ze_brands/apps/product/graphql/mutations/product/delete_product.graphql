@@ -1,0 +1,26 @@
+mutation deleteProduct(
+  	$productId:ID!
+){
+    deleteProduct( 
+        input: {
+          	productId:$productId
+           
+        }
+    )
+  {
+    success
+    product{
+        id
+        sku
+        name
+        price
+        brand{
+          id
+          originalId
+          name
+          description
+        }
+    }
+    message
+  }
+}

@@ -1,0 +1,29 @@
+mutation createProduct(
+    $price:Decimal!
+    $name:String!
+    $brandId:ID!
+){
+    createProduct( 
+        input: {
+            name:$name 
+            price:$price 
+            brandId:$brandId
+        }
+    )
+  {
+    success
+    product{
+        id
+        sku
+        name
+        price
+        brand {
+          id
+          originalId
+          name
+          description
+        }
+    }
+    message
+  }
+}

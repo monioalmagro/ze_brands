@@ -1,0 +1,20 @@
+query productAllQuery{
+  allProducts{
+    totalCount
+    edges{
+      node{
+        id
+        originalId
+        sku
+        name
+        price
+        brand{
+          id
+          originalId
+          name
+          description
+        }
+      }
+    }
+  }
+}
